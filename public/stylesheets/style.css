@@ -1,0 +1,51 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial;
+  background-image: url('https://wallpapersite.com/images/wallpapers/justice-league-4000x2750-2017-movies-flash-superman-wonder-woman-1674.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    
+    border-radius: 10px; 
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+p { color: #850000; font-family: 'Stencil Std, fantasy';
+ font-size: 30px; line-height: 24px; margin: 0 0 24px;
+  text-align: center; text-justify: inter-word; }
+
+h1{
+	 color: #850000; font-family: 'Stencil Std, fantasy';  font-size: 260px; 
+	 font-weight: bold; letter-spacing: -1px; 
+	 line-height: 1; text-align: center;
+	 text-shadow: 0 0 3px #FF0000;
+	 text-shadow: rgb();
+	 
+
+}
+
+h2{
+	h2 { color: #850000; font-family: 'Stencil Std, fantasy'; 
+	 font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; }
+}
+
+button {
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+a{
+
+}

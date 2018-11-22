@@ -1,0 +1,13 @@
+extends layout
+
+block content
+ each val in data
+  .row
+   .card
+    .card-content
+     span.card-title Saved Data.!
+      p Name : #{val.superhero}
+      p Real Name:#{val.alter_ego} 
+      p Character:#{val.characters}
+      p Id:#{val.id} 
+      p Publisher:#{val.publisher}
