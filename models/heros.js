@@ -167,5 +167,29 @@ Heros.updatehero = function(updateHeroData){
 
 	});
 }
+Heros.getHero = function(value){
+	return new Promise(function(resolve,reject){
+    // create the connection to database
+	const connection = mysql.createConnection({
+	  host: 'localhost',
+	  user: 'root',
+	  database: 'heros',
+	  password:'ccs#1234'
+	});
+	let query = `select * from Comic where id = ${value.id}`;
+	connection.query(query,function(err,result,fields){
+		// rows in results and columns in fields
+		if(err){
+			console.log(err);
+			console.log('ERR: fetching data from database');
+			reject();
+		}
+		else{
+			resolve(result);
+		}
+	});
+});
+}
+
 
 module.exports = Heros;

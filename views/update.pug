@@ -1,32 +1,55 @@
 extends layout
 
 block content
-  
-  h1= title
-  p Hope Is Easy To Lose
- 
-  
-  form(action='updatehero' method='get')
-   .row
-    .input-field.col.s6
-     label(for='superhero') Super Hero
-     input#superhero.validate(type='text',name='superhero')
-   .row
-    .input-field.col.s6
-     label(for='publisher') Publisher Name
-     input#publisher.validate(type='text',name='publisher')
-   .row
-    .input-field.col.s6
-     label(for='alter_ego') Alter Ego
-     input#alter_ego.validate(type='text',name='alter_ego')
-   .row
-    .input-field.col.s6
-     label(for='first_appearance') First Appearance
-     input#first_appearance.validate(type='text',name='first_appearance')   
-   .row
-    .input-field.col.s6
-     label(for='characters') Characters
-     input#characters.validate(type='text',name='characters') 
+
+ p Registration Form
+  each val in data
+   form(action='updateData' method='get')
+    input(type='hidden',name='id',value=val.id)
+    .row
+     .input-field.col.s6
+      label(for='superhero') Superhero
+      input#superhero.validate(type='text', name='superhero')
+    .row
+     .input-field.col.s6
+      label(for='publisher') Publisher
+      input#publisher.validate(type='text', name='publisher') 
    
-   .row
-    button.btn(type='submit') Update
+    .row
+     .input-field.col.s6
+      label(for='alter_ego') Alter-Ego
+      input#alter_ego.validate(type='text', name='alter_ego')
+   
+    .row
+     .input-field.col.s6
+      label(for='first_appearance') First Appearence
+      input#first_appearance.validate(type='text', name='first_appearance')
+
+    .row
+     .input-field.col.s6
+      label(for='characters') Characters
+      input#characters.validate(type='text', name='characters')
+
+    .row
+     button.btn(type='Submit') Go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

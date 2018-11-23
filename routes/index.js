@@ -61,9 +61,17 @@ router.get('/viewHero', function(req, res, next) {
 	})
 	.catch(console.log('ERR:: In resolving the promise')) 
 });
+router.get('/updateData', function(req, res, next) {
+	Heros.updatehero(req.query)
+	.then(function(){
+		res.redirect('/getAllHeros')
+	})
+	 .catch(console.log('ERR:: In resolving the promise')) 
+});
+
 
 router.get('/updatehero', function(req, res, next) {  
-  Heros.updatehero(req.query)
+  Heros.getHero(req.query)
   .then(function(retVal){
 		res.render('update', { data: retVal});
 	})
